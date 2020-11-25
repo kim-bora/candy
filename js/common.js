@@ -1,7 +1,7 @@
 
 
 (function($){
-    $('#header .asideBtn,#aside .asideClose').click(function(){
+    $('#header .asideArea,#aside .asideClose').click(function(){
         $('body').toggleClass('asideopen');    
     }); 
 	$(function() {  
