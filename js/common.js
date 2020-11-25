@@ -1,58 +1,53 @@
-
-
-(function($){
-    $('#header .asideArea,#aside .asideClose').click(function(){
+$(document).ready(function() {
+    // 명함 온오프
+    $('#header .asideArea, #aside .asideClose').click(function(){
         $('body').toggleClass('asideopen');    
     }); 
-	$(function() {  
-        var mainHeader = $('#header'); 
-        var scrollArrow = $('.scrollArrow');  
-        var floatMenu = $('.floatMenu');  
-        $(window).scroll(function () {        
-            if ($(this).scrollTop() > 400) {            
-                mainHeader.addClass('fix');        
-            } else {            
-                mainHeader.removeClass('fix');        
-            }    
-        });  
-        $(window).scroll(function () {        
-            if ($(this).scrollTop() > 200) {            
-                scrollArrow.fadeOut();        
-            } else {            
-                scrollArrow.fadeIn();        
-            }    
-        });  
-        $(window).scroll(function () {        
-            if ($(this).scrollTop() > 600) {            
-                floatMenu.fadeIn();        
-            } else {            
-                floatMenu.fadeOut();        
-            }    
-        }); 
-    });
-    $('.floatSearch > a').click(function(){
-        $('.floatSearch').toggleClass('open');    
-    }); 
-
-    $('.upBtn').click(function(e) {
-        $('body, html').stop().animate({scrollTop:0}, 300);
-        e.preventDefault();
-    });
-    $('.downBtn').click(function(e) {
-        $('body, html').stop().animate({scrollTop: $(document).height() + $(window).height()}, 300);
-        e.preventDefault();
-    });
-    $(window).ready(function() {
-        function loop() {
-            $('.scrollArrow img').animate ({ top: '+=4' }, 300) 
-                .animate({ top: '-=4' }, 200)
-                .animate({ top: '+=4' }, 300)
-                .animate({ top: '-=4' }, 200)
-                .animate({bottom:50}, 1000, function() {
-                loop();
-            });
-            }
-        loop();
-    });
+     // 스크롤 fix 애로우 페이드처리
+     var Hedaer = $('#header'); 
+     var scrollArrow = $('.scrollArrow');  
+     $(window).scroll(function () {        
+      if ($(this).scrollTop() > 400) {            
+         Hedaer.addClass('fix');        
+     } else {            
+         Hedaer.removeClass('fix');        
+     }    
+ });  
+     $(window).scroll(function () {        
+      if ($(this).scrollTop() > 200) {            
+         scrollArrow.fadeOut();        
+     } else {            
+         scrollArrow.fadeIn();        
+     }    
+ });  
      
-})(jQuery);     
+     // 스크롤 애로우 애니메이션
+     function loop() {
+        $('.scrollArrow img').animate ({ top: '+=4' }, 300) 
+        .animate({ top: '-=4' }, 200)
+        .animate({ top: '+=4' }, 300)
+        .animate({ top: '-=4' }, 200)
+        .animate({bottom:50}, 1000, function() {
+            loop();
+        });
+    }
+    loop();
+    
+    //스크롤 애로우
+    scrollArrow.click(function(){ 
+        var first_area = $('.mainSlide').next().offset().top;   
+        alert(first_area);
+        $('html, body').animate ({ scrollTop:first_area+"px" }, 500);
+    }); 
+    
+    // 메인 슬라이드
+    var swiper = new Swiper('.mainSlide', {
+        loop:true,    
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },   
+        speed:1000
+    });
+    
+});

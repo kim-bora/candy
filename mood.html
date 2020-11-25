@@ -3,6 +3,7 @@
 <head>
 	<title>차가 필요한 순간, 쏘카</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Playfair+Display:400,700" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="./css/common.css">
 	<link type="text/css" rel="stylesheet" href="./css/swiper.css">
@@ -12,26 +13,26 @@
 </head>
 <body>
 	
-	<body id="main"> 
+	<body> 
 		<!-- 헤더 시작 -->
 		<div id="header" class="mainheader">
 			<div class="inner">
 				<div class="topArea">
 					<h1 class="xans-element- xans-layout xans-layout-logotop ">
-						<a href="/" class="playF ani5">KIMBORA</a>
+						<a href="/" class="playF linear5">KIMBORA</a>
 					</h1>
 					<div class="asideArea">
 						<strong>
-							<span class="ani1"></span>
-							<span class="ani1"></span>
-							<span class="ani1"></span>
+							<span class="ease1"></span>
+							<span class="ease1"></span>
+							<span class="ease1"></span>
 						</strong>
 					</div>
 					<div class="rightArea">
 						<ul> 
-							<li><a href="#Profile" class="ani5">Profile</a></li>
-							<li><a href="#Portfolio" class="ani5">Portfolio &amp; Project</a></li>
-							<li><a href="#Contact" class="ani5">Contact</a></li>
+							<li><a href="#Profile" class="linear5">Profile</a></li>
+							<li><a href="#Portfolio" class="linear5">Portfolio &amp; Project</a></li>
+							<li><a href="#Contact" class="linear5">Contact</a></li>
 						</ul>
 					</div>
 				</div>        
@@ -39,29 +40,29 @@
 		</div>
 
 		<!-- 명함 -->
-		<div id="aside">
+		<div id="aside" class="ease5">
 			<div class="asideClose"><img src="./images/aside_close.png"></div>
 			<div class="asideBox">
-				<ul class="topArea">
+				<div class="topArea">
 					<h1>Kimbora</h1>
 					<div class="menuBox" id="menuCate">
-						<div><a href="/shop/shopbrand.html?xcode=006&mcode=003&type=Y" class="menu03"><span>1994. 9. 7</span></a></div>
-						<div><a href="/shop/shopbrand.html?xcode=006&mcode=002&type=Y" class="menu01"><span>+82 10 4252 7340</span></a></div>
-						<div><a href="/shop/shopbrand.html?xcode=006&mcode=001&type=Y" class="menu02"><span>0907purple@naver.com</span></a></div> 
+						<div><span>1994. 9. 7</span></div>
+						<div><span>+82 10 4252 7340</span></div>
+						<div><span>0907purple@naver.com</span></div> 
 					</div>
-					<h1><a href="/shop/shopbrand.html?xcode=007&type=P" class="ani5">@_mariahwasa</a></h1>
-					<h1><a href="/shop/shopbrand.html?xcode=008&type=Y" class="ani5">Publisher</a></h1> 
-				</ul>
-				<ul class="bottomArea">
+					<h1><a href="https://www.instagram.com/_mariahwasa" class="linear5">@_mariahwasa</a></h1>
+					<h1><a href="#none" class="linear5">Publisher</a></h1> 
+				</div>
+				<div class="bottomArea">
 					<h1>Skill</h1>
 					<div class="menuBox">
-						<div><a href="/shop/faq.html">HTML</a></div>
-						<div><a href="/board/board.html?code=moodnight_board1">CSS</a></div>
-						<div><a href="/board/board.html?code=moodnight_board3">Javascript/JQuery</a></div>
-						<div><a href="/board/board.html?code=moodnight_image1">Photoshop/Illustrator</a></div>
+						<div>HTML</div>
+						<div>CSS</div>
+						<div>Javascript/JQuery</div>
+						<div>Photoshop/Illustrator</div>
 					</div>
 					<p class="txt">Happy things happen every day.</p>
-				</ul>
+				</div>
 			</div>
 			<!--어사이드 끝 -->
 		</div> 
@@ -81,10 +82,8 @@
 							<li class="swiper-slide" style="background-image:url('./images/slide4.jpg')"></li>  
 							<li class="swiper-slide" style="background-image:url('./images/slide5.jpg')"></li>  
 							<li class="swiper-slide" style="background-image:url('./images/slide6.jpg')"></li>  
-						</ul>
-						<div class="swiper-pagination mainPaging"></div>
-					</div>
-
+						</ul> 
+					</div> 
 					<!---// main slide ---> 
 
 					<!--- 액션 배너 영역 --->
@@ -167,27 +166,6 @@
 						<!---// 하프 배너 ---> 
 
 
-						<script>
-							var swiper = new Swiper('.mainSlide', {
-								loop:true,    
-								autoplay: {
-									delay: 5000,
-									disableOnInteraction: false,
-								},   
-								speed:1000,
-								pagination: {
-									el: '.mainPaging',
-									clickable: true,
-									renderBullet: function (index, className) {
-										return '<span class="' + className + '">' + (index + 1) + '</span>';
-									},
-								},
-							});
-							AOS.init({
-								easing: 'ease-in-out-sine'
-							});  
-
-						</script>  
 					</div>
 					<!-- contents --> 
 				</div> 
