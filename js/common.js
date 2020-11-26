@@ -36,7 +36,7 @@ $(document).ready(function() {
     //스크롤 애로우
     scrollArrow.click(function(){ 
         var first_area = $('.mainSlide').next().offset().top;   
-        alert(first_area);
+       // alert(first_area);
         $('html, body').animate ({ scrollTop:first_area+"px" }, 500);
     }); 
     
@@ -49,5 +49,28 @@ $(document).ready(function() {
         },   
         speed:1000
     });
+	
+	// 프로필 스크롤 효과
+	
+		var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+     $(window).scroll(function () {        
+      
+        // mv showing 
+        $('.subTit, .mainTit, .img img, .circle, .sideTxt').each(function(index) {
+            var time = 30;
+            var $li = $(this);
+            var objectBottom = $(this).offset().top - $(this).outerHeight()/8;
+            if (objectBottom <= windowBottom) { 
+                setTimeout(function() {
+                    $li.removeClass('moveout');
+                    $li.addClass('moveit');
+                }, index*time);
+            }
+        });
+ });  
+ 
+ 
+ 
+ 
     
 });
