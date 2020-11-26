@@ -1,4 +1,8 @@
 $(document).ready(function() {
+ // 반응형 txt
+                setTimeout(function() {
+                    $('.ex').fadeOut();
+                }, 5000);
     // 명함 온오프
     $('#header .asideArea, #aside .asideClose').click(function(){
         $('body').toggleClass('asideopen');    
@@ -52,12 +56,13 @@ $(document).ready(function() {
 	
 	// 프로필 스크롤 효과
 	
-		var windowBottom = $(this).scrollTop() + $(this).innerHeight();
      $(window).scroll(function () {        
+		var windowTom = $(this).scrollTop(); // 스크롤 탑 기준
+		var windowBottom = $(this).scrollTop() + $(this).innerHeight(); // 스크롤 바텀 기준
       
         // mv showing 
-        $('.subTit, .mainTit, .img img, .circle, .sideTxt').each(function(index) {
-            var time = 30;
+        $('.subTit, .mainTit, .img img, .sideTxt').each(function(index) { 
+            var time = 30; 
             var $li = $(this);
             var objectBottom = $(this).offset().top - $(this).outerHeight()/8;
             if (objectBottom <= windowBottom) { 
@@ -68,7 +73,6 @@ $(document).ready(function() {
             }
         });
  });  
- 
  
  
  

@@ -123,7 +123,7 @@
 .homeF {
 	font-family: 'Homemade Apple', cursive;
 }
-/* **************************** //필수 CSS 수정 및 삭제 불가 **************************** */
+/* **************************** //í•„ìˆ˜ CSS ìˆ˜ì • ë° ì‚­ì œ ë¶ˆê°€ **************************** */
 
 /* tag reset */
 
@@ -194,7 +194,7 @@ div:focus {
 .displaynone {
 	display:none;
 }
-/* **************************** 필수 CSS 수정 및 삭제 불가 **************************** */
+/* **************************** í•„ìˆ˜ CSS ìˆ˜ì • ë° ì‚­ì œ ë¶ˆê°€ **************************** */
 
 /* Layout */
 #header {
@@ -479,15 +479,17 @@ filter(opacity=00);
 	text-align:center;
 }
 .mainMidBanner .box {
-	padding:15vh 0;
+    /* padding: 7vh 0; */
+    padding: 80px 0;
 	position:relative;
 }
 .mainMidBanner h1.subTit {
 	color:#fff;
-	font-size:4vw;
+    font-size: 5vw;
+    font-size: 5vh;
 	font-weight:normal;
 	line-height:1;
-	padding-top:13vh;
+	padding-top: 0;
 	padding-bottom:1vh;
 }
 .mainMidBanner .mainImg {
@@ -495,20 +497,21 @@ filter(opacity=00);
 }
 .mainMidBanner h2.mainTit {
 	color:#fff;
-	font-size:8.2vw;
+    /* font-size: 8vw; */
+    font-size: 8vh;
 	font-weight:normal;
 	line-height:1;
 	position:absolute;
 	top:2%;
-	left:50%;
-	margin-left:-26vw;
+	left: 0;
+	right: 0;
 	z-index:2;
 }
 .mainMidBanner .mainImg .img {
 	position:relative;
 	left:50%;
 	transform: translate(-50%, 0);
-	height:44vw;
+	height: 53vw;
 	overflow:hidden;
 }
 .mainMidBanner .mainImg .img img {
@@ -541,145 +544,43 @@ filter(opacity=00);
 .mainMidBanner .mainImg .sideTxt {
 	color:#fff;
 	position:absolute;
-	top:60%;
+	top: 50%;
+	transform: translateY(-50%);
 	text-align:left;
-	left:50%;
-	margin-left:16vw;
-	font-size:0.6vw;
+	/* left:50%; */
+	/* margin-left:16vw; */
+	right: 0;
+	margin-right: 2vw;
+	font-size: 1.8vw;
 	font-weight:100;
-}
-.campaignPrdArea {
-	width:100%;
-	overflow:hidden;
-	position:relative;
-	padding:10vw 0 14vw;
-}
-.campaignPrdArea .swiper-container {
-	width:70%;
-	margin:0 auto;
-	overflow:initial;
-	max-width:1350px;
-}
-.campaignPrdArea .swiper-button-next, .campaignPrdArea .swiper-button-prev {
-	width:60px;
-	height:120px;
-	margin-top:-60px;
-	background-size: 60px 120px;
-	top:30vw;
-}
-.campaignPrdArea .swiper-button-prev {
-	background-image: url(/design/moodnight/homepage/img/arrow_left.png);
-	left: 2%;
-	right: auto;
-}
-.campaignPrdArea .swiper-button-next {
-	background-image: url(/design/moodnight/homepage/img/arrow_right.png);
-	right: 2%;
-	left: auto;
-}
-.editorialArea {
-	width:100%;
-	background:#a8aebc;
-}
-.editorialArea .box {
-	padding:12vw 0 12vw 5vw;
-	position:relative;
-}
-.editorialArea .box > div {
-	display:inline-block;
-	vertical-align:top;
-}
-.editorialArea .box .leftArea .img.top {
-	width:12.5vw;
-	margin-bottom:40px;
-}
-.editorialArea .box .leftArea .img.bottom {
-	width:12.7vw;
-}
-.editorialArea .box .leftArea .img img {
-	width:100%;
-}
-.editorialArea .box .centerText {
-	left:23vw;
-	position:absolute;
-	z-index:2;
-	color:#fff;
-	top:15vw;
-}
-.editorialArea .box .centerText .tit {
-	font-size:4vw;
-	letter-spacing:0.1vw;
-	padding-bottom:1.5vw;
-}
-.editorialArea .box .centerText .txt {
-	font-size:0.7vw;
-	letter-spacing:0.05vw;
-	line-height:1.6;
-}
-.editorialArea .box .centerImg {
-	position:absolute;
-	z-index:1;
-	left:50%;
-	top:-3vw;
-}
-.editorialArea .box .centerImg .img img {
-	width:100%;
-}
-.editorialArea .box .centerImg .top {
-	width:26vw;
-}
-.editorialArea .box .centerImg .bottom {
-	width:15vw;
-	margin-left:13vw;
-	margin-top:0.7vw;
-}
-.editorialArea .box .centerImg .bottom .over {
-	position:absolute;
-	bottom:-4vw;
-	right:-1vw;
-	width:7vw;
-}
-.editorialArea .box .rightArea {
-	position:absolute;
-	right:0;
-}
-.editorialArea .box .rightArea .img {
-	font-size:0;
-}
-.editorialArea .box .rightArea .img img {
-	width:100%;
-}
-.editorialArea .box .rightArea .img div {
-	display:inline-block;
-	vertical-align:top;
-	width:8vw;
-}
-.editorialArea .box .rightArea .img div.right {
-	margin-left:1vw;
-}
-.editorialArea .box .rightArea .txt {
-	margin-top:1vw;
-	color:#fff;
-	font-size:0.6vw;
-	font-weight:100;
+	background: url('../images/info.png') no-repeat;
+	background-size: 64%;
+	background-position: bottom right;
+	padding-bottom: 4vh;
+} 
+.halfFullBanner {
+    background: #a8aebc;
+    padding: 84px 0;
 }
 .halfFullBanner ul {
 	font-size:0;
+    width: 80%;
 }
 .halfFullBanner ul li {
 	display:inline-block;
 	vertical-align:top;
 	width:50%;
-	overflow:hidden;
+/*	overflow:hidden; */
 	position:relative;
 }
 .halfFullBanner ul li .txt {
-	position:absolute;
-	left:1vw;
-	top:1vw;
-	font-size:9.5vw;
-	color:rgba(255,255,255,0.4);
-	line-height:1;
+    position: absolute;
+    right: -7vw;
+    top: -3vw;
+    font-size: 7.5vw;
+    color: rgba(255,255,255,0.7);
+    line-height: 1;
+    text-align: center;
 }
 .halfFullBanner ul li img {
 	width:100%;
@@ -718,8 +619,55 @@ filter(opacity=00);
 	background-size: cover;
 	background-position: center;
 }
+.editorialArea .box .centerText .txt a {
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
 
+.editorialArea .box .centerText .txt a:after {content:"";background: #687e99;opacity: 0.4;display: block;width: 112%;height: 1vw;position: absolute;bottom: 2px;left: -10px;right: 0;}
+ 
+.mainMidBanner .mainImg .leftTxt {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    /* left: 50%; */
+    /* margin-left: 16vw; */
+    left: 0;
+    margin-left: 2vw;
+    font-size: 1.8vw;
+    font-weight: 100; 
+}
 
+.mainMidBanner .mainImg .leftTxt h2 {
+    font-weight: 400;
+    font-size: 5vh;
+}
+.ex {
+    position: fixed;
+    bottom: 0;
+    z-index: 22;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: block;
+    background: rgb(255 255 255 / 0.25);
+    height: 44px;
+    line-height: 44px;
+}
+.halfFullBanner ul {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.halfFullBanner {
+    background: #a8aebc;
+    padding: 80px 0;
+}
 /* phone */
  
 @media all and (max-width:767px) {
@@ -740,5 +688,40 @@ filter(opacity=00);
 }
 #header .rightArea > ul > li > a {
 	display: inline-block;
+}
+.mainMidBanner .mainImg .sideTxt {
+    font-size: 4vw;
+    text-align: right;
+    top: 77%;
+    transform: translateY(0);
+}
+.mainMidBanner h2.mainTit {
+    font-size: 6vw;
+}
+
+.mainMidBanner h1.subTit {font-size: 3.5vw;}
+
+.mainMidBanner .box {
+    padding: 16vh 0;
+}
+.mainMidBanner .mainImg .img { 
+    height: 79vw; 
+}
+
+ 
+.mainMidBanner .mainImg .leftTxt {
+    font-size: 4vw;
+    bottom: 30%;
+}
+
+.mainMidBanner .mainImg .leftTxt h2 {
+    font-size: 7vw;
+}
+.halfFullBanner {
+    padding: 5vh 0;
+}
+.halfFullBanner ul li .txt {
+    font-size: 5vw;
+    right: -5vw;
 }
 }
