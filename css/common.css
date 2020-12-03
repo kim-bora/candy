@@ -136,7 +136,7 @@ html {
 	height:100%;
 }
 body {
-	font:0.75em 'Noto Sans KR', sans-serif;
+	font: 12px 'Noto Sans KR', sans-serif;
 	color:#000;
 	background:#fff;
 }
@@ -668,6 +668,92 @@ filter(opacity=00);
     background: #a8aebc;
     padding: 80px 0;
 }
+
+.list {
+    max-width: 1260px;
+    font-size: 0;
+    margin: 0 auto;
+    padding-top: 4%;
+}
+
+.list li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    width: 22%;
+    margin-bottom: 4%;
+    margin-left: 4%;
+    -webkit-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.list li a {
+    display: block;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+.list li a:hover {
+    /* opacity: 0.85; */
+}
+
+.list li a .thumb {
+    overflow: hidden;
+}
+
+.list li a .thumb img {
+    width: 100%;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+.list li a:hover .thumb img {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.list li .desc {
+    font-size: 12px;
+    padding: 5px;
+}
+
+.list li .desc > a > p {
+    font-size: 15px;
+    font-weight: 600;
+    padding-top: 7px;
+}
+
+.list li .desc > p {
+    font-size: 12px;
+    padding-top: 3px;
+}
+
+.list li .desc > p > a {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.list li .desc > p > a:hover {
+    opacity: 0.75;
+}
+
+.list li:nth-child(4n+1) {margin-left: 0;}
+
+
+
 /* phone */
  
 @media all and (max-width:767px) {
